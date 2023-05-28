@@ -1,7 +1,7 @@
 import { db } from "../database/database.connection.js";
 
 export async function getHotelsBySummit(req, res) {
-    const { summit } = req.params;
+    const { summit } = req.body;
     try {
         const { rows } = await db.query(`
         SELECT  json_agg(json_build_object(
