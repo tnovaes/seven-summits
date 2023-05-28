@@ -3,8 +3,8 @@ import { getFlightInfo, getFlightsBySummit, insertFlight } from "../controllers/
 
 const flightsRouter = Router();
 
-flightsRouter.get("/flights", getFlightsBySummit);
-flightsRouter.get("/flights/:id", getFlightInfo);
+flightsRouter.get("/flights/:summit", getFlightsBySummit);
+flightsRouter.get("/flights/id/:id", getFlightInfo);
 flightsRouter.post("/flights", insertFlight);
 
 export default flightsRouter;

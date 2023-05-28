@@ -3,8 +3,8 @@ import { getHotelInfo, getHotelsBySummit, insertHotel } from "../controllers/hot
 
 const hotelsRouter = Router();
 
-hotelsRouter.get("/hotels", getHotelsBySummit);
-hotelsRouter.get("/hotels/:id", getHotelInfo);
+hotelsRouter.get("/hotels/:summit", getHotelsBySummit);
+hotelsRouter.get("/hotels/id/:id", getHotelInfo);
 hotelsRouter.post("/hotels", insertHotel);
 
 
